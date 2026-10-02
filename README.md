@@ -4,6 +4,10 @@ An audio-driven generative music video. It assembles one strange but legible
 administrative form from fragments of real documents and keeps revising it in time
 with the music.
 
+![Sample: a new sheet lands on the pile and fills with fragments, stamps and handwriting](docs/sample.gif)
+
+*Rendered from the built-in synthetic project (`form-seq fixture`): forms layer over the background scene.*
+
 ```
 audio ──► beats.json ─┐
                       ├─► sequencer ──► timeline.json ──► renderer ──► sink (ffmpeg mp4 / PNG / …)
@@ -393,3 +397,7 @@ addressable from the manifest. A TouchDesigner patch can read `timeline.json`
 and `build/fragments/crops/` directly. Alternatively, a live mode can drive
 `FrameRenderer.frame(t)` from an audio clock and write to a new `FrameSink`
 (Spout, NDI, a window) without touching analysis or sequencing.
+
+## License
+
+MIT. See [LICENSE](LICENSE).
